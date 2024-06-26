@@ -16,7 +16,7 @@ CPU: Minimum of 1/2 core.
 Memory: 2 to 4 GB.
 Storage: SSD or NVMe with at least 5GB of space.
 
-### Install Perequisite 
+### Install Prerequisite 
 ```
 sudo apt update
 sudo apt upgrade -y
