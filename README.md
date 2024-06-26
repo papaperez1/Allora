@@ -2,7 +2,12 @@
 
 
 __________________
-## Amount Raised 
+### Login to Dashboard
+Link: https://shorturl.at/PTix1
+Connect your keplr wallet and note down your alloxx address
+![image](https://github.com/papaperez1/Allora/assets/118633093/48048769-5906-4769-8ba2-c5b4c35f5f87)
+
+### Amount Raised 
 Allora raised a total of $33.75M from Delphi, Polychain Capital among other Investors 
 ![image](https://github.com/papaperez1/Allora/assets/118633093/1b0aa7b8-16f0-4862-a9d8-26c0b2689c7c)
 
@@ -74,6 +79,9 @@ allocmd --version
 ### Wallet Setup
 ```
 curl -sSL https://raw.githubusercontent.com/allora-network/allora-chain/main/install.sh | bash -s -- v0.0.10
+```
+```
+export PATH="$PATH:/root/.local/bin"
 ```
 ```
 git clone -b v0.0.10 https://github.com/allora-network/allora-chain.git
@@ -264,11 +272,12 @@ docker compose up -d
 docker ps
 ```
 copy the container ID and run the below command
-![image](https://github.com/papaperez1/Allora/assets/118633093/53eeabd6-7902-40df-be69-8987b6cc7aab)
+![image](https://github.com/papaperez1/Allora/assets/118633093/c165c1f2-a357-4572-97ba-a545acc08f6e)
+
 ```
 docker logs -f CONTAINER_ID
 ```
-wait for couple for min and you will a message like this
+wait for couple for min and you will a message like this (make sure you have test tokens in wallet for gas)
 `Success: register node Tx Hash:=82BF67E2E1247B226B8C5CFCF3E4F41076909ADABF3852C468D087D94BD9FC3B`
 ### Check node status
 Worker Node:
