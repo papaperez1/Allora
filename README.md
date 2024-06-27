@@ -15,6 +15,7 @@ Allora raised a total of $33.75M from Delphi, Polychain Capital among other Inve
 CPU: Minimum of 1/2 core.
 Memory: 2 to 4 GB.
 Storage: SSD or NVMe with at least 5GB of space.
+OS :UBUNTU 22.04 LTS
 
 ### Install Prerequisite 
 ```
@@ -271,7 +272,7 @@ docker compose up -d
 ```
 docker ps
 ```
-copy the container ID and run the below command
+copy the container ID of the worker and run the below command
 ![image](https://github.com/papaperez1/Allora/assets/118633093/c165c1f2-a357-4572-97ba-a545acc08f6e)
 
 ```
