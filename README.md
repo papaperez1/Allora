@@ -126,7 +126,7 @@ Create worker keys
 ```
 sudo docker run -it --entrypoint=bash -v ./worker-data:/data alloranetwork/allora-inference-base:latest -c "mkdir -p /data/keys && (cd /data/keys && allora-keys)"
 ```
-Copy the head-id as heighlighted and keep it safe (copy before rootxxx as heighlighted)
+Copy the head-id and keep it in notepad (copy before rootxxx as heighlighted)
 ```
 cat head-data/keys/identity
 ```
