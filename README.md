@@ -279,6 +279,8 @@ copy the container ID of the worker and run the below command
 docker logs -f CONTAINER_ID
 ```
 wait for couple for min and you will a message like this (make sure you have test tokens in wallet for gas)
+
+CURRENTLY HAVING RPC ISSUE! WAIT FOR FIX
 `Success: register node Tx Hash:=82BF67E2E1247B226B8C5CFCF3E4F41076909ADABF3852C468D087D94BD9FC3B`
 ### Check node status
 Worker Node:
