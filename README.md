@@ -104,7 +104,7 @@ Create a new wallet
 ```
 allorad keys add testkey
 ```
-Get faucet from https://faucet.testnet.allora.network/ and make sure you imported the wallet in keplr.
+Get faucet from https://faucet.edgenet.allora.network/ and check balance from https://explorer.edgenet.allora.network/allora-edgenet.
 
 ### Setup coin prediction worker ( reference  @0xmoei)
 ```
