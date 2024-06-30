@@ -104,7 +104,12 @@ Create a new wallet
 ```
 allorad keys add testkey
 ```
-Get faucet from https://faucet.edgenet.allora.network/ and check balance from https://explorer.edgenet.allora.network/allora-edgenet.
+Get faucet from https://faucet.edgenet.allora.network/
+![image](https://github.com/papaperez1/Allora/assets/118633093/14812d64-d73c-422b-a85c-9af1e15266de)
+
+Check balance from https://explorer.edgenet.allora.network/allora-edgenet. (connect wallet -> Click More as below)
+![image](https://github.com/papaperez1/Allora/assets/118633093/8045ff36-b692-4546-a3d7-d583337ada1f)
+
 
 ### Setup coin prediction worker ( reference  @0xmoei)
 ```
@@ -278,10 +283,8 @@ copy the container ID of the worker and run the below command
 ```
 docker logs -f CONTAINER_ID
 ```
-wait for couple for min and you will a message like this (make sure you have test tokens in wallet for gas)
+![image](https://github.com/papaperez1/Allora/assets/118633093/72dd4f6e-a10a-43c8-afd7-ef862d281dd2)
 
-CURRENTLY HAVING RPC ISSUE! WAIT FOR FIX
-`Success: register node Tx Hash:=82BF67E2E1247B226B8C5CFCF3E4F41076909ADABF3852C468D087D94BD9FC3B`
 ### Check node status
 Worker Node:
 ```
