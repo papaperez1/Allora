@@ -356,3 +356,14 @@ Response:
 References: 
 https://docs.allora.network/
 https://github.com/0xmoei/allora-testnet/edit/main/README.md
+
+###Step to Restart docker containers for Troubleshooting
+
+
+
+```
+docker compose down
+```
+```
+docker compose up -d
+```
