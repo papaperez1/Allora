@@ -357,7 +357,7 @@ References:
 https://docs.allora.network/
 https://github.com/0xmoei/allora-testnet/edit/main/README.md
 
-###Step to Restart docker containers for Troubleshooting
+### Step to Restart docker containers for Troubleshooting
 
 
 
