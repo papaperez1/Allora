@@ -210,7 +210,7 @@ services:
           --runtime-path=/app/runtime --runtime-cli=bls-runtime --workspace=/data/workspace \
           --private-key=/data/keys/priv.bin --log-level=debug --port=9011 \
           --boot-nodes=/ip4/172.22.0.100/tcp/9010/p2p/head-id \
-          --topic=1 \
+          --topic=allora-topic-1-worker \
           --allora-chain-key-name=testkey \
           --allora-chain-restore-mnemonic='WALLET_SEED_PHRASE' \
           --allora-node-rpc-address=https://allora-rpc.edgenet.allora.network/ \
@@ -307,59 +307,16 @@ curl --location 'http://localhost:6000/api/v1/functions/execute' \
             }
         ],
         "number_of_nodes": -1,
-        "timeout": 2
+        "timeout": 10
     }
 }'
 ```
 Response:
 ```
-{
-  "code": "200",
-  "request_id": "03001a39-4387-467c-aba1-c0e1d0d44f59",
-  "results": [
-    {
-      "result": {
-        "stdout": "{\"value\":\"2564.021586281073\"}",
-        "stderr": "",
-        "exit_code": 0
-      },
-      "peers": [
-        "12D3KooWG8dHctRt6ctakJfG5masTnLaKM6xkudoR5BxLDRSrgVt"
-      ],
-      "frequency": 100
-    }
-  ],
-  "cluster": {
-    "peers": [
-      "12D3KooWG8dHctRt6ctakJfG5masTnLaKM6xkudoR5BxLDRSrgVt"
-    ]
-  }
-}
+{"code":"200","request_id":"e58e04dd-2093-4080-90ef-6a643b4cd502","results":[{"result":{"stdout":"{\"infererValue\": \"2933.659091272926\"}\n\n","stderr":"","exit_code":0},"peers":["12D3KooWHedCuh21LY9LyFHiFWRTqZS7y9tt9jEoEXraUvaiFXz4"],"frequency":100}],"cluster":{"peers":["12D3KooWHedCuh21LY9LyFHiFWRTqZS7y9tt9jEoEXraUvaiFXz4"]}}
 ```
-Check Updater Node:
-```
-curl http://localhost:8000/update
-```
-Response:
-```
-0
-```
-Check Inference node:
-```
-curl http://localhost:8000/inference/ETH
-```
-Response:
-```
-{"value":"2564.021586281073"}
-```
-
-References: 
-https://docs.allora.network/
-https://github.com/0xmoei/allora-testnet/edit/main/README.md
 
 ### Step to Restart docker containers for Troubleshooting
-
-
 
 ```
 docker compose down
@@ -367,3 +324,7 @@ docker compose down
 ```
 docker compose up -d
 ```
+
+References: 
+https://docs.allora.network/
+https://github.com/0xmoei/allora-testnet/edit/main/README.md
