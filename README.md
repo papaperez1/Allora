@@ -7,6 +7,8 @@ Link: https://shorturl.at/PTix1
 Connect your keplr wallet and note down your alloxx address
 ![image](https://github.com/papaperez1/Allora/assets/118633093/48048769-5906-4769-8ba2-c5b4c35f5f87)
 
+Points will retrospective, will be visible after phase 2
+
 ### Amount Raised 
 Allora raised a total of $33.75M from Delphi, Polychain Capital among other Investors 
 ![image](https://github.com/papaperez1/Allora/assets/118633093/1b0aa7b8-16f0-4862-a9d8-26c0b2689c7c)
