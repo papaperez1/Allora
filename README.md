@@ -1,6 +1,12 @@
-# Allora Incentivized testnet phase 2 Worker Setup
+# Allora Incentivized testnet v2 Worker Setup with 1 topic
+![image](https://github.com/user-attachments/assets/68b1cf9f-15ac-41f5-9f38-503eceada52c)
 
-
+```
+If you are already running a worker just update these new changes for v2 testnet:
+1. Get testnet tokens from new faucet url: https://faucet.testnet-1.testnet.allora.network/
+2. new explorer url: https://explorer.testnet-1.testnet.allora.network
+3. Update in docker compose file with this new explorer url
+4. Update worker status curl command
 __________________
 ### Login to Dashboard
 Link: https://shorturl.at/PTix1
@@ -109,11 +115,14 @@ Create a new wallet
 ```
 allorad keys add testkey
 ```
-Get faucet from https://faucet.edgenet.allora.network/
-![image](https://github.com/papaperez1/Allora/assets/118633093/14812d64-d73c-422b-a85c-9af1e15266de)
+Get faucet from https://faucet.testnet-1.testnet.allora.network/
 
-Check balance from https://explorer.edgenet.allora.network/allora-edgenet. (connect wallet -> Click More as below)
-![image](https://github.com/papaperez1/Allora/assets/118633093/8045ff36-b692-4546-a3d7-d583337ada1f)
+![image](https://github.com/user-attachments/assets/89ff07de-b3de-4afa-9653-f9c960230656)
+
+
+Check balance from https://explorer.testnet-1.testnet.allora.network. (connect wallet -> Click More as below)
+![image](https://github.com/user-attachments/assets/0c059eff-b00c-4f73-a0cc-3bfc84661ed6)
+
 
 
 ### Setup coin prediction worker ( reference  @0xmoei)
@@ -218,7 +227,7 @@ services:
           --topic=allora-topic-1-worker \
           --allora-chain-key-name=testkey \
           --allora-chain-restore-mnemonic='WALLET_SEED_PHRASE' \
-          --allora-node-rpc-address=https://allora-rpc.edgenet.allora.network/ \
+          --allora-node-rpc-address=https://allora-rpc.testnet-1.testnet.allora.network/ \
           --allora-chain-topic-id=1
     volumes:
       - ./worker-data:/data
@@ -291,11 +300,12 @@ docker logs -f CONTAINER_ID
 ![image](https://github.com/papaperez1/Allora/assets/118633093/72dd4f6e-a10a-43c8-afd7-ef862d281dd2)
 
 ### Check node status
-Worker Node:
 ```
-curl --location 'http://localhost:6000/api/v1/functions/execute' \
---header 'Content-Type: application/json' \
---data '{
+apt install jq
+```
+```
+network_height=$(curl -s -X 'GET' 'https://allora-rpc.testnet-1.testnet.allora.network/abci_info?' -H 'accept: application/json' | jq -r .result.response.last_block_height) && \
+curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Content-Type: application/json' --data '{
     "function_id": "bafybeigpiwl3o73zvvl6dxdqu7zqcub5mhg65jiky2xqb4rdhfmikswzqm",
     "method": "allora-inference-function.wasm",
     "parameters": null,
@@ -309,12 +319,16 @@ curl --location 'http://localhost:6000/api/v1/functions/execute' \
             {
                 "name": "ALLORA_ARG_PARAMS",
                 "value": "ETH"
+            },
+            {
+                "name": "ALLORA_BLOCK_HEIGHT_CURRENT",
+                "value": "'"${network_height}"'"
             }
         ],
         "number_of_nodes": -1,
         "timeout": 10
     }
-}'
+}' | jq
 ```
 Response:
 ```
