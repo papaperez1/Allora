@@ -7,6 +7,7 @@ If you are already running a worker just update these new changes for v2 testnet
 2. new explorer url: https://explorer.testnet-1.testnet.allora.network
 3. Update in docker compose file with this new explorer url
 4. Update worker status curl command
+```
 __________________
 ### Login to Dashboard
 Link: https://shorturl.at/PTix1
