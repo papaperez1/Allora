@@ -333,9 +333,8 @@ curl --location 'http://localhost:6000/api/v1/functions/execute' --header 'Conte
 }' | jq
 ```
 Response:
-```
-{"code":"200","request_id":"e58e04dd-2093-4080-90ef-6a643b4cd502","results":[{"result":{"stdout":"{\"infererValue\": \"2933.659091272926\"}\n\n","stderr":"","exit_code":0},"peers":["12D3KooWHedCuh21LY9LyFHiFWRTqZS7y9tt9jEoEXraUvaiFXz4"],"frequency":100}],"cluster":{"peers":["12D3KooWHedCuh21LY9LyFHiFWRTqZS7y9tt9jEoEXraUvaiFXz4"]}}
-```
+![image](https://github.com/user-attachments/assets/e48a687c-28ec-499d-bcb2-f6fe3bee3681)
+
 
 ### Step to Restart docker containers for Troubleshooting
 
