@@ -5,7 +5,7 @@
 If you are already running a worker just update these new changes for v2 testnet:
 1. Get testnet tokens from new faucet url: https://faucet.testnet-1.testnet.allora.network/
 2. new rpc url: https://explorer.testnet-1.testnet.allora.network
-3. Update in docker compose file with this new explorer url
+3. Update in docker compose file with this new rpc url
 4. stop docker compose and rebuild the compose file
 5. Update worker status curl command
 ```
